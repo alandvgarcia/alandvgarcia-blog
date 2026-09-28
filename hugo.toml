@@ -1,5 +1,5 @@
 baseURL = "https://alandvgarcia.github.io/alandvgarcia-blog/"
-languageCode = "pt-br"
+locale = "pt-br"
 title = "Alan Garcia"
 theme = "hextra"
 
