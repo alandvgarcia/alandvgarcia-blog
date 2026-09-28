@@ -4,7 +4,7 @@ title: "Alan Garcia | Mobile & Multiplatform Engineer"
 
 <div style="text-align: center; margin: 2rem 0;">
   <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">Olá, eu sou o Alan Garcia 👋</h1>
-  <p style="font-size: 1.25rem; color: #94a3b8; max-width: 650px; margin: 0 auto 1.5rem auto;">
+  <p class="text-gray-600 dark:text-gray-400 hx:text-gray-600 hx:dark:text-gray-400" style="font-size: 1.25rem; max-width: 650px; margin: 0 auto 1.5rem auto;">
     Engenheiro de Software focado no desenvolvimento <strong>Mobile & Multiplatform</strong>, especializado no ecossistema <strong>Kotlin, Compose Multiplatform, Android e iOS</strong>.
   </p>
   <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
