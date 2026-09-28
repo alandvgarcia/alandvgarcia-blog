@@ -1,0 +1,53 @@
+{{ $repo := .Get "repo" | default "alandvgarcia/alandvgarcia-blog" }}
+<div id="github-issues-board-root" data-repo="{{ $repo }}">
+  <div class="board-header">
+    <div class="board-controls">
+      <input type="text" id="issues-search-input" placeholder="🔍 Filtrar issues por título ou label..." />
+      <button id="issues-refresh-btn" title="Atualizar dados">🔄 Atualizar</button>
+      <a href="https://github.com/{{ $repo }}/issues/new" target="_blank" rel="noopener noreferrer" class="board-btn-primary">
+        ➕ Nova Issue / Sugestão
+      </a>
+    </div>
+  </div>
+
+  <div id="board-status-message" class="board-status-hidden"></div>
+
+  <div class="kanban-grid">
+    <div class="kanban-column" id="col-todo">
+      <div class="column-header">
+        <span class="column-title">📋 Backlog / A Fazer</span>
+        <span class="column-counter" id="count-todo">0</span>
+      </div>
+      <div class="column-cards" id="cards-todo">
+        <div class="card-skeleton"></div>
+        <div class="card-skeleton"></div>
+      </div>
+    </div>
+
+    <div class="kanban-column" id="col-in-progress">
+      <div class="column-header">
+        <span class="column-title">⚡ Em Andamento</span>
+        <span class="column-counter" id="count-in-progress">0</span>
+      </div>
+      <div class="column-cards" id="cards-in-progress">
+        <div class="card-skeleton"></div>
+      </div>
+    </div>
+
+    <div class="kanban-column" id="col-done">
+      <div class="column-header">
+        <span class="column-title">✅ Concluído</span>
+        <span class="column-counter" id="count-done">0</span>
+      </div>
+      <div class="column-cards" id="cards-done">
+        <div class="card-skeleton"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ $css := resources.Get "css/issues-board.css" | resources.Minify }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" />
+
+{{ $js := resources.Get "js/issues-board.js" | resources.Minify }}
+<script src="{{ $js.RelPermalink }}" defer></script>
