@@ -1,0 +1,59 @@
+baseURL = "https://alandvgarcia.github.io/alandvgarcia-blog/"
+languageCode = "pt-br"
+title = "Alan Garcia"
+theme = "hextra"
+
+# Enable emojis and Hugo modules
+enableEmoji = true
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    noClasses = false
+    style = "github-dark"
+
+[menu]
+  [[menu.main]]
+    name = "Início"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "Portfólio"
+    url = "/portfolio/"
+    weight = 2
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 3
+  [[menu.main]]
+    name = "Roadmap & Issues"
+    url = "/roadmap/"
+    weight = 4
+  [[menu.main]]
+    name = "GitHub"
+    url = "https://github.com/alandvgarcia"
+    weight = 5
+    [menu.main.params]
+      icon = "github"
+
+[params]
+  theme = { default = "dark", displayToggle = true }
+  
+  [params.navbar]
+    displayLogo = true
+    displayTitle = true
+    title = "Alan Garcia"
+
+  [params.search]
+    enable = true
+    type = "flexsearch"
+
+  [params.footer]
+    displayCopyright = true
+    displayPoweredBy = true
+
+  [params.social]
+    github = "https://github.com/alandvgarcia"
+
