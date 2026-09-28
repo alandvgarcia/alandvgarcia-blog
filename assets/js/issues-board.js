@@ -25,6 +25,15 @@
     statusMsg.innerHTML = text;
   }
 
+  function clearSkeletons(message = "Não foi possível carregar as tarefas") {
+    colTodo.innerHTML = `<div style="color:#64748b; font-size:0.85rem; padding:0.5rem;">${message}</div>`;
+    colInProgress.innerHTML = `<div style="color:#64748b; font-size:0.85rem; padding:0.5rem;">${message}</div>`;
+    colDone.innerHTML = `<div style="color:#64748b; font-size:0.85rem; padding:0.5rem;">${message}</div>`;
+    countTodo.textContent = "0";
+    countInProgress.textContent = "0";
+    countDone.textContent = "0";
+  }
+
   function getCachedIssues() {
     try {
       const raw = sessionStorage.getItem(CACHE_KEY);
@@ -67,7 +76,8 @@
       if (response.status === 403) {
         const rateLimitReset = response.headers.get("X-RateLimit-Reset");
         const resetTime = rateLimitReset ? new Date(rateLimitReset * 1000).toLocaleTimeString() : "";
-        showStatus(`⚠️ Limite de requisições temporário da API anônima do GitHub atingido (reseta às ${resetTime}). <a href="https://github.com/${repo}/issues" target="_blank" style="text-decoration:underline; font-weight:bold;">Acessar issues no GitHub</a>`, true);
+        showStatus(`⚠️ Limite de requisições temporário da API anônima do GitHub atingido (reseta às ${resetTime}). <a href="https://github.com/${repo}/issues" target="_blank" rel="noopener noreferrer" style="text-decoration:underline; font-weight:bold;">Acessar issues no GitHub</a>`, true);
+        clearSkeletons();
         return;
       }
 
@@ -82,7 +92,8 @@
       render();
     } catch (err) {
       console.error("Error fetching issues:", err);
-      showStatus(`Não foi possível carregar as issues em tempo real. <a href="https://github.com/${repo}/issues" target="_blank" style="text-decoration:underline;">Clique aqui para ver no GitHub</a>.`, true);
+      showStatus(`Não foi possível carregar as issues em tempo real. <a href="https://github.com/${repo}/issues" target="_blank" rel="noopener noreferrer" style="text-decoration:underline;">Clique aqui para ver no GitHub</a>.`, true);
+      clearSkeletons();
     }
   }
 
