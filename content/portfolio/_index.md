@@ -34,7 +34,7 @@ Desenvolvimento de aplicações projetadas para operar de forma contínua em cen
 
 - **Arquitetura Offline-First**: Persistência local atômica e confiável como fonte primária da verdade, permitindo uso integral da aplicação sem dependência de conexão imediata.
 - **Sincronização em Segundo Plano**: Estratégias inteligentes de sincronização, resolução de conflitos e envio resiliente de dados acumulados assim que a rede estiver disponível.
-- **Integração com Hardware Local**: Comunicação e troca de dados com periféricos, sensores e dispositivos de campo via conectividade local (Bluetooth e protocolos de comunicação direta), com tratamento de reconexão e filas de mensagens.
+- **Integração com Periféricos & Conectividade Local**: Comunicação resiliente com dispositivos e hardware externo através de protocolos de conexão local, garantindo troca de dados estável e tolerância a desconexões.
 
 ---
 
