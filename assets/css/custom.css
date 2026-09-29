@@ -1,35 +1,30 @@
 /* Custom CSS for calm-planck */
 
-/* Reset Hextra's buggy absolute positioning of card tags */
-.hextra-card-tag {
-  position: static;
+/* Fix card badge (hextra-badge hextra-card-tag) so it NEVER overlaps the card title */
+.hextra-card .hextra-card-tag,
+.hextra-badge.hextra-card-tag {
+  position: static !important;
+  order: -1 !important;
+  display: flex !important;
+  justify-content: flex-end !important;
+  padding: 0.875rem 1rem 0 !important;
+  margin: 0 !important;
+  top: auto !important;
+  right: auto !important;
+  left: auto !important;
+  z-index: 1 !important;
 }
 
-.hextra-card-header {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 0.5rem;
-  padding: 1rem 1rem 0 1rem;
+/* If card has an image, position badge over the top-right of the image */
+.hextra-card:has(img) .hextra-card-tag {
+  position: absolute !important;
+  top: 0.5rem !important;
+  right: 0.5rem !important;
+  padding: 0 !important;
+  z-index: 10 !important;
 }
 
-.hextra-card-header.no-subtitle {
-  padding-bottom: 1rem;
-}
-
-.hextra-card-title {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.5rem;
-  font-weight: 600;
-  flex: 1 1 160px;
-  min-width: 0;
-  word-break: break-word;
-}
-
-.hextra-card-badge {
-  flex-shrink: 0;
-  margin-top: 0.125rem;
-  margin-left: auto;
+/* Adjust title padding when tag is placed above it */
+.hextra-card:has(.hextra-card-tag) .hextra-card-icon {
+  padding-top: 0.35rem !important;
 }
