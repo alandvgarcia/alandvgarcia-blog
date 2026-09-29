@@ -27,7 +27,7 @@ Aplicativos móveis nativos e multiplataforma publicados na **Google Play Store*
 {{< cards >}}
   {{< card link="/portfolio/minha-biblia/" title="📖 Minha Bíblia — Devocional & Áudio TTS" subtitle="App Android 100% Jetpack Compose, arquitetura MVI pura, banco SQLite com Room, sincronização de áudio TTS em tempo real e 100% offline." tag="Google Play • Jetpack Compose" >}}
   {{< card link="/portfolio/marca-tento/" title="🃏 Marca Tento — Contador de Truco" subtitle="Contador ágil de tento e placar em Jetpack Compose e Material 3, com feedback tátil e operação 100% offline." tag="Google Play • Android Nativo" >}}
-  {{< card link="/portfolio/cemicloud/" title="☁️ CemiCloud — Soluções Mobile" subtitle="App Flutter multiplataforma (Android & iOS) com arquitetura Offline-First (Mediator), busca FTS4 no SQLite e mapeamento vetorial no Canvas." tag="Google Play • Flutter" >}}
+  {{< card link="/portfolio/cemicloud/" title="☁️ CemiCloud — Soluções Mobile" subtitle="App Flutter multiplataforma (Android & iOS) com arquitetura Offline-First (Mediator), busca textual no SQLite e mapas interativos." tag="Google Play • Flutter" >}}
 {{< /cards >}}
 
 ---
