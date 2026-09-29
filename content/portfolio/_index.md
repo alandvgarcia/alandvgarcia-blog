@@ -9,15 +9,16 @@ Aqui apresento meus aplicativos publicados na **Google Play Store**, bem como os
 
 ## 📱 Aplicativos em Produção (Google Play Store)
 
-Aplicativos Android nativos desenvolvidos com foco em performance, experiência do usuário e arquitetura limpa, disponíveis publicamente para download:
+Aplicativos móveis nativos e multiplataforma desenvolvidos com foco em performance, experiência do usuário e arquitetura limpa, disponíveis publicamente para download:
 
 {{< cards >}}
   {{< card link="/portfolio/minha-biblia/" title="📖 Minha Bíblia — Devocional & Áudio TTS" subtitle="App Android 100% Jetpack Compose, arquitetura MVI pura, banco SQLite pré-populado com Room, sincronização de áudio Text-to-Speech (TTS) em tempo real e 100% offline." tag="Jetpack Compose • MVI • Room" >}}
   {{< card link="/portfolio/marca-tento/" title="🃏 Marca Tento — Contador & Placar de Truco" subtitle="App Android nativo em Jetpack Compose e Material 3 para controle ágil do placar de Truco, com feedback tátil, customização de regras e operação 100% offline." tag="Android Nativo • Compose • Offline" >}}
+  {{< card link="/portfolio/cemicloud/" title="☁️ CemiCloud — Soluções Mobile" subtitle="Aplicativo Flutter multiplataforma (Android & iOS) com arquitetura Offline-First (Mediator), busca FTS4 no SQLite, mapeamento vetorial no Canvas e autenticação OAuth2 / PKCE." tag="Flutter • Dart • Offline-First • Canvas" >}}
 {{< /cards >}}
 
 > [!TIP]
-> Clique nos cards acima para conferir o **estudo de caso completo**, detalhes de arquitetura, dependências do Gradle e links diretos para download na **Google Play Store**.
+> Clique nos cards acima para conferir o **estudo de caso completo**, detalhes de arquitetura, decisões técnicas e links diretos para download na **Google Play Store**.
 
 ---
 

@@ -10,6 +10,7 @@ title: "Alan Garcia | Mobile & Multiplatform Engineer"
   <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
     <span style="background: #0284c7; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Kotlin Multiplatform</span>
     <span style="background: #38bdf8; color: #0f172a; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Compose Multiplatform</span>
+    <span style="background: #02569B; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Flutter & Dart</span>
     <span style="background: #22c55e; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Android Nativo</span>
     <span style="background: #f97316; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Swift & iOS</span>
     <span style="background: #14b8a6; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Offline-First & Conectividade</span>
@@ -21,11 +22,12 @@ title: "Alan Garcia | Mobile & Multiplatform Engineer"
 
 ## 📱 Apps Publicados em Produção
 
-Aplicativos Android nativos desenvolvidos com **Jetpack Compose** e publicados na **Google Play Store**:
+Aplicativos móveis nativos e multiplataforma publicados na **Google Play Store**:
 
 {{< cards >}}
   {{< card link="/portfolio/minha-biblia/" title="📖 Minha Bíblia — Devocional & Áudio TTS" subtitle="App Android 100% Jetpack Compose, arquitetura MVI pura, banco SQLite com Room, sincronização de áudio TTS em tempo real e 100% offline." tag="Google Play • Jetpack Compose" >}}
   {{< card link="/portfolio/marca-tento/" title="🃏 Marca Tento — Contador de Truco" subtitle="Contador ágil de tento e placar em Jetpack Compose e Material 3, com feedback tátil e operação 100% offline." tag="Google Play • Android Nativo" >}}
+  {{< card link="/portfolio/cemicloud/" title="☁️ CemiCloud — Soluções Mobile" subtitle="App Flutter multiplataforma (Android & iOS) com arquitetura Offline-First (Mediator), busca FTS4 no SQLite e mapeamento vetorial no Canvas." tag="Google Play • Flutter" >}}
 {{< /cards >}}
 
 ---
