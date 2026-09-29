@@ -1,0 +1,411 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Alan Garcia – Portfólio &amp; Atuação Profissional</title><link>https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/</link><description>Recent content in Portfólio &amp; Atuação Profissional on Alan Garcia</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Mon, 28 Sep 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>CemiCloud — Plataforma Mobile Multiplataforma</title><link>https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/cemicloud/</link><pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate><guid>https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/cemicloud/</guid><description>
+&lt;div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;"&gt;
+&lt;a href="https://play.google.com/store/apps/details?id=com.cemicloud.cemicloud.android" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #01875f; color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9rem;"&gt;
+&lt;span&gt;▶ Ver na Google Play Store&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 data-hextra-search-id="-visão-geral-técnica"&gt;📌 Visão Geral Técnica&lt;span class="hx:absolute hx:-mt-20" id="-visão-geral-técnica"&gt;&lt;/span&gt;
+&lt;a href="#-vis%c3%a3o-geral-t%c3%a9cnica" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;O &lt;strong&gt;CemiCloud&lt;/strong&gt; é uma solução móvel multiplataforma (&lt;strong&gt;Android &amp;amp; iOS&lt;/strong&gt;) desenvolvida com o framework &lt;strong&gt;Flutter (Dart 3)&lt;/strong&gt;. O projeto foi concebido com foco em alta disponibilidade em campo, resiliência em locais com baixa conectividade e navegação fluida para consultas rápidas.&lt;/p&gt;
+&lt;p&gt;Minha atuação no projeto concentrou-se na &lt;strong&gt;arquitetura de software&lt;/strong&gt;, estruturação de pipelines de dados &lt;strong&gt;Offline-First&lt;/strong&gt;, gestão de estado reativa com &lt;strong&gt;BLoC/Cubit&lt;/strong&gt; e &lt;strong&gt;RxDart&lt;/strong&gt;, integração de mapas interativos e comunicação de rede resiliente com autenticação segura via OAuth2.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-arquitetura--padrões-de-engenharia"&gt;🏛️ Arquitetura &amp;amp; Padrões de Engenharia&lt;span class="hx:absolute hx:-mt-20" id="-arquitetura--padrões-de-engenharia"&gt;&lt;/span&gt;
+&lt;a href="#-arquitetura--padr%c3%b5es-de-engenharia" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;h3 data-hextra-search-id="1-padrão-mediator--arquitetura-offline-first-cache-first"&gt;1. Padrão Mediator &amp;amp; Arquitetura Offline-First (Cache-First)&lt;span class="hx:absolute hx:-mt-20" id="1-padrão-mediator--arquitetura-offline-first-cache-first"&gt;&lt;/span&gt;
+&lt;a href="#1-padr%c3%a3o-mediator--arquitetura-offline-first-cache-first" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Para garantir que a aplicação continue completamente funcional em locais com conectividade instável ou inexistente, foi adotado o padrão &lt;strong&gt;Mediator&lt;/strong&gt; desacoplando a camada de rede e a persistência local:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Fluxo Reativo com Dart Streams:&lt;/strong&gt; A interface solicita a listagem e recebe imediatamente a emissão do cache local via SQLite (&lt;code&gt;yield cachePage&lt;/code&gt;), proporcionando carregamento instantâneo (&lt;em&gt;zero loading percebido&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sincronização em Segundo Plano:&lt;/strong&gt; Em paralelo, o mediador realiza a requisição HTTP via &lt;strong&gt;Dio&lt;/strong&gt; para atualizar dados remotos. Ao obter a resposta, persiste em lote (&lt;code&gt;Batch&lt;/code&gt;) no banco local e emite os dados consolidados para a UI.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tolerância a Falhas Silenciosa:&lt;/strong&gt; Caso ocorra timeout ou perda de conexão, o erro de rede é absorvido sem bloquear o usuário, garantindo navegação contínua sobre os dados locais já sincronizados.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="2-persistência-local-avançada-com-sqlite"&gt;2. Persistência Local Avançada com SQLite&lt;span class="hx:absolute hx:-mt-20" id="2-persistência-local-avançada-com-sqlite"&gt;&lt;/span&gt;
+&lt;a href="#2-persist%c3%aancia-local-avan%c3%a7ada-com-sqlite" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Busca Textual Indexada:&lt;/strong&gt; Tabelas locais estruturadas com suporte a buscas rápidas insensíveis a acentos e caracteres especiais para respostas imediatas.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Versionamento &amp;amp; Migrações:&lt;/strong&gt; Gerenciamento estruturado de esquema com migrações de banco de dados para evolução contínua da base local.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Cache Local de Mídias:&lt;/strong&gt; Armazenamento local de arquivos e imagens para visualização offline segura sem dependência de requisições repetidas de rede.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="3-gestão-de-estado-híbrida--reativa"&gt;3. Gestão de Estado Híbrida &amp;amp; Reativa&lt;span class="hx:absolute hx:-mt-20" id="3-gestão-de-estado-híbrida--reativa"&gt;&lt;/span&gt;
+&lt;a href="#3-gest%c3%a3o-de-estado-h%c3%adbrida--reativa" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;O projeto combina ferramentas de gestão de estado adequadas para cada nível de complexidade:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;BLoC &amp;amp; Cubit (&lt;code&gt;flutter_bloc&lt;/code&gt;):&lt;/strong&gt; Fluxos de telas, paginação infinita e ciclos de vida de listagens gerenciados com estados imutáveis bem delimitados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Programação Reativa com RxDart:&lt;/strong&gt; Utilização de &lt;code&gt;BehaviorSubject&lt;/code&gt;, &lt;code&gt;PublishSubject&lt;/code&gt; e operadores como &lt;code&gt;debounceTime&lt;/code&gt;, &lt;code&gt;distinct()&lt;/code&gt; e &lt;code&gt;switchMap()&lt;/code&gt; para controlar a cadência de buscas em tempo real e unificação de filtros.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;MobX:&lt;/strong&gt; Stores observáveis para modelos de domínio que exigem reatividade granular e sincronização dinâmica em tela.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Injeção de Dependências:&lt;/strong&gt; Composição hierárquica e distribuição de stores no topo da árvore de componentes com &lt;code&gt;MultiProvider&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="4-visualização-espacial--mapas-interativos"&gt;4. Visualização Espacial &amp;amp; Mapas Interativos&lt;span class="hx:absolute hx:-mt-20" id="4-visualização-espacial--mapas-interativos"&gt;&lt;/span&gt;
+&lt;a href="#4-visualiza%c3%a7%c3%a3o-espacial--mapas-interativos" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Navegação Interativa:&lt;/strong&gt; Componentes visuais com suporte a gestos de exploração, pan e zoom para facilitar a localização e orientação espacial.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Integração com Mapas:&lt;/strong&gt; Suporte a visualização geográfica nativa via &lt;strong&gt;Google Maps SDK&lt;/strong&gt; e acionamento de rotas e direções externas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="5-networking-resiliente--autenticação-oauth2--pkce"&gt;5. Networking Resiliente &amp;amp; Autenticação OAuth2 / PKCE&lt;span class="hx:absolute hx:-mt-20" id="5-networking-resiliente--autenticação-oauth2--pkce"&gt;&lt;/span&gt;
+&lt;a href="#5-networking-resiliente--autentica%c3%a7%c3%a3o-oauth2--pkce" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Cliente HTTP com Dio:&lt;/strong&gt; Interceptor customizado com injeção automática de &lt;code&gt;Bearer Token&lt;/code&gt;, detecção de expiração e mecanismo de &lt;strong&gt;retentativa transparente&lt;/strong&gt; (&lt;code&gt;_retry&lt;/code&gt;) após renovação de token no recebimento de status &lt;code&gt;401 Unauthorized&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OAuth2 / OpenID Connect com PKCE:&lt;/strong&gt; Implementação do fluxo de autorização segura via &lt;code&gt;flutter_appauth&lt;/code&gt;, com armazenamento seguro de chaves e tokens criptografados no Android Keystore e iOS Keychain com &lt;code&gt;flutter_secure_storage&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="6-recursos-de-áudio-voz-e-usabilidade"&gt;6. Recursos de Áudio, Voz e Usabilidade&lt;span class="hx:absolute hx:-mt-20" id="6-recursos-de-áudio-voz-e-usabilidade"&gt;&lt;/span&gt;
+&lt;a href="#6-recursos-de-%c3%a1udio-voz-e-usabilidade" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Busca por Voz:&lt;/strong&gt; Integração com reconhecimento de fala para agilizar a pesquisa de registros.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Player de Áudio:&lt;/strong&gt; Gerenciamento e reprodução de fluxos de áudio in-app com controle de ciclo de vida.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-stack-técnica-completa"&gt;🛠️ Stack Técnica Completa&lt;span class="hx:absolute hx:-mt-20" id="-stack-técnica-completa"&gt;&lt;/span&gt;
+&lt;a href="#-stack-t%c3%a9cnica-completa" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;Camada&lt;/th&gt;
+&lt;th style="text-align: left"&gt;Tecnologia / Pacote&lt;/th&gt;
+&lt;th style="text-align: left"&gt;Finalidade Técnica&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Framework &amp;amp; Linguagem&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Flutter 3.x / Dart 3&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Desenvolvimento multiplataforma unificado (Android e iOS)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Persistência Local&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;SQLite (&lt;code&gt;sqflite&lt;/code&gt;)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Banco de dados relacional com busca textual e migrações&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Arquitetura de Dados&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Mediator Pattern&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Estratégia Cache-First com sincronização assíncrona em background&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Gestão de Estado&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;BLoC / Cubit (&lt;code&gt;flutter_bloc&lt;/code&gt;)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Controle previsível de estados de tela, paginação e eventos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Reatividade&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;RxDart (&lt;code&gt;rxdart&lt;/code&gt;)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Operadores reativos (&lt;code&gt;debounceTime&lt;/code&gt;, &lt;code&gt;switchMap&lt;/code&gt;, &lt;code&gt;merge&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Domínio Observável&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;MobX (&lt;code&gt;mobx&lt;/code&gt;)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Stores reativas de alta granularidade&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Injeção de Dependência&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Provider (&lt;code&gt;provider&lt;/code&gt;)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Distribuição desacoplada de dependências na árvore de widgets&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Networking &amp;amp; HTTP&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Dio (&lt;code&gt;dio&lt;/code&gt;)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Interceptors com auto-refresh de tokens e retries transparentes&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Segurança &amp;amp; Auth&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;flutter_appauth&lt;/code&gt; + &lt;code&gt;flutter_secure_storage&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Autenticação OAuth2 / PKCE e armazenamento criptografado&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Mapas &amp;amp; Localização&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Google Maps SDK &amp;amp; Mapas Nativos&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Visualização espacial e rotas&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Recursos de Voz &amp;amp; Áudio&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;speech_to_text&lt;/code&gt; + &lt;code&gt;just_audio&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Reconhecimento de fala e player de áudio&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Design System&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Material Design 3&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Suporte nativo a Temas Claro e Escuro dinâmicos&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;CI/CD &amp;amp; Automação&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;GitHub Actions + &lt;code&gt;flutter drive&lt;/code&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Pipelines automatizados de release e testes de integração&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-download--disponibilidade"&gt;📲 Download &amp;amp; Disponibilidade&lt;span class="hx:absolute hx:-mt-20" id="-download--disponibilidade"&gt;&lt;/span&gt;
+&lt;a href="#-download--disponibilidade" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google Play Store:&lt;/strong&gt; &lt;a
+href="https://play.google.com/store/apps/details?id=com.cemicloud.cemicloud.android"target="_blank" rel="noopener"&gt;CemiCloud no Google Play&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pacote:&lt;/strong&gt; &lt;code&gt;com.cemicloud.cemicloud.android&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desenvolvedor / Empresa:&lt;/strong&gt; CemiCloud Soluções Inovadoras&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Marca Tento — Contador &amp; Placar de Truco</title><link>https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/marca-tento/</link><pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate><guid>https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/marca-tento/</guid><description>
+&lt;div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;"&gt;
+&lt;a href="https://play.google.com/store/apps/details?id=com.alandvgarcia.marcatento&amp;hl=pt_BR" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #01875f; color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9rem;"&gt;
+&lt;span&gt;▶ Ver na Google Play Store&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 data-hextra-search-id="-visão-geral-do-produto"&gt;📌 Visão Geral do Produto&lt;span class="hx:absolute hx:-mt-20" id="-visão-geral-do-produto"&gt;&lt;/span&gt;
+&lt;a href="#-vis%c3%a3o-geral-do-produto" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;O &lt;strong&gt;Marca Tento&lt;/strong&gt; é um aplicativo Android desenvolvido em &lt;strong&gt;Kotlin&lt;/strong&gt; e &lt;strong&gt;Jetpack Compose&lt;/strong&gt; para solucionar um problema clássico das rodadas de Truco entre amigos: a necessidade de improvisar marcações com feijão, milho, fósforos ou tampas de garrafa.&lt;/p&gt;
+&lt;p&gt;O objetivo do projeto foi entregar uma experiência visual limpa, extremamente rápida e responsiva, que permita a qualquer jogador controlar o placar em frações de segundo, sem perder a concentração na mesa de jogo.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-arquitetura--decisões-de-engenharia"&gt;🏗️ Arquitetura &amp;amp; Decisões de Engenharia&lt;span class="hx:absolute hx:-mt-20" id="-arquitetura--decisões-de-engenharia"&gt;&lt;/span&gt;
+&lt;a href="#-arquitetura--decis%c3%b5es-de-engenharia" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;O aplicativo foi projetado seguindo as diretrizes modernas recomendadas pela equipe do Android para utilitários de alta performance:&lt;/p&gt;
+&lt;h3 data-hextra-search-id="1-ui-declarativa-moderna-com-jetpack-compose"&gt;1. UI Declarativa Moderna com Jetpack Compose&lt;span class="hx:absolute hx:-mt-20" id="1-ui-declarativa-moderna-com-jetpack-compose"&gt;&lt;/span&gt;
+&lt;a href="#1-ui-declarativa-moderna-com-jetpack-compose" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;100% Compose:&lt;/strong&gt; Toda a interface foi implementada com Jetpack Compose e Material Design 3, eliminando completamente layouts XML legados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ergonomia &amp;amp; Usabilidade:&lt;/strong&gt; Botões e áreas de interação desenhados com espaçamento generoso para permitir que o usuário opere o contador usando apenas o polegar com uma mão.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Suporte a Temas:&lt;/strong&gt; Suporte nativo a temas Claro e Escuro (&lt;em&gt;Dark Mode&lt;/em&gt;), com alto contraste para visibilidade em diferentes ambientes (churrascos ao ar livre, bares ou iluminação noturna).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="2-arquitetura-reativa--gerenciamento-de-estado"&gt;2. Arquitetura Reativa &amp;amp; Gerenciamento de Estado&lt;span class="hx:absolute hx:-mt-20" id="2-arquitetura-reativa--gerenciamento-de-estado"&gt;&lt;/span&gt;
+&lt;a href="#2-arquitetura-reativa--gerenciamento-de-estado" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;MVVM / Clean Architecture:&lt;/strong&gt; Separação estrita de responsabilidades entre a camada de visualização (Composables), modelos de visão e lógica de pontuação.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ViewModel &amp;amp; StateFlow:&lt;/strong&gt; O estado do jogo (pontuação atual da rodada, contagem de tentos, vitórias de quedas anteriores e nomes das equipes) é emitido de forma reativa e imutável via &lt;code&gt;StateFlow&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resiliência a Mudanças de Configuração:&lt;/strong&gt; Blindagem total contra perda de dados em rotações de tela ou mudanças de contexto no dispositivo (&lt;em&gt;configuration changes&lt;/em&gt;).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="3-persistência-local--resiliência-100-offline-first"&gt;3. Persistência Local &amp;amp; Resiliência (100% Offline-First)&lt;span class="hx:absolute hx:-mt-20" id="3-persistência-local--resiliência-100-offline-first"&gt;&lt;/span&gt;
+&lt;a href="#3-persist%c3%aancia-local--resili%c3%aancia-100-offline-first" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Zero Dependência de Rede:&lt;/strong&gt; O aplicativo funciona de maneira completamente autônoma, sem necessidade de internet e sem requisição de permissões invasivas do sistema operacional.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Preferências Customizáveis:&lt;/strong&gt; Limite de pontos da queda configurável (12 ou 24 pontos), personalização dos nomes das duplas e retenção automática do estado caso o app seja minimizado.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="4-feedback-multissensorial--acessibilidade"&gt;4. Feedback Multissensorial &amp;amp; Acessibilidade&lt;span class="hx:absolute hx:-mt-20" id="4-feedback-multissensorial--acessibilidade"&gt;&lt;/span&gt;
+&lt;a href="#4-feedback-multissensorial--acessibilidade" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Haptic Feedback Integrado:&lt;/strong&gt; Resposta tátil calibrada para cada tipo de incremento (tento individual, truco valendo 3, seis, nove, doze e vitória da rodada), garantindo que o usuário sinta a confirmação do toque sem precisar desviar a atenção visual das cartas.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-tecnologias-utilizadas"&gt;🛠️ Tecnologias Utilizadas&lt;span class="hx:absolute hx:-mt-20" id="-tecnologias-utilizadas"&gt;&lt;/span&gt;
+&lt;a href="#-tecnologias-utilizadas" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;Tecnologia&lt;/th&gt;
+&lt;th style="text-align: left"&gt;Finalidade&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Kotlin&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Linguagem principal do projeto, usufruindo de concorrência segura e tipagem estática.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Android SDK Nativo&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Integração direta com os recursos do sistema operacional Android.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Jetpack Compose&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Toolkit moderno de interface declarativa nativa para Android.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Material Design 3&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Componentes visuais com suporte a temas e tipografia consistente.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Jetpack ViewModel &amp;amp; Lifecycle&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Gerenciamento do ciclo de vida e estado reativo da tela.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Kotlin Coroutines &amp;amp; StateFlow&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Fluxos de dados assíncronos e estados imutáveis previsíveis.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Haptic Feedback &amp;amp; Vibrator API&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Confirmação sensorial tátil imediata para jogadas e pontuação.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Offline-First Local Storage&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Armazenamento de preferências e configurações locais.&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-download--disponibilidade"&gt;📲 Download &amp;amp; Disponibilidade&lt;span class="hx:absolute hx:-mt-20" id="-download--disponibilidade"&gt;&lt;/span&gt;
+&lt;a href="#-download--disponibilidade" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google Play Store:&lt;/strong&gt; &lt;a
+href="https://play.google.com/store/apps/details?id=com.alandvgarcia.marcatento&amp;amp;hl=pt_BR"target="_blank" rel="noopener"&gt;Marca Tento no Google Play&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pacote:&lt;/strong&gt; &lt;code&gt;com.alandvgarcia.marcatento&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Categoria:&lt;/strong&gt; Jogos de Cartas / Entretenimento&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Minha Bíblia — Leitura, Devocional &amp; Áudio TTS</title><link>https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/minha-biblia/</link><pubDate>Mon, 28 Sep 2026 00:00:00 +0000</pubDate><guid>https://alandvgarcia.github.io/alandvgarcia-blog/portfolio/minha-biblia/</guid><description>
+&lt;div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;"&gt;
+&lt;a href="https://play.google.com/store/apps/details?id=com.advg.minhabibilia" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #01875f; color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9rem;"&gt;
+&lt;span&gt;▶ Ver na Google Play Store&lt;/span&gt;
+&lt;/a&gt;
+&lt;a href="https://github.com/alandvgarcia/MinhaBibilia" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #24292f; color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9rem; border: 1px solid #444;"&gt;
+&lt;span&gt;🔒 Repositório Privado no GitHub&lt;/span&gt;
+&lt;/a&gt;
+&lt;/div&gt;
+&lt;h2 data-hextra-search-id="-visão-geral-do-produto"&gt;📌 Visão Geral do Produto&lt;span class="hx:absolute hx:-mt-20" id="-visão-geral-do-produto"&gt;&lt;/span&gt;
+&lt;a href="#-vis%c3%a3o-geral-do-produto" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;O &lt;strong&gt;Minha Bíblia&lt;/strong&gt; nasceu como um refúgio pessoal de meditação e estudo bíblico. Em um ecossistema com aplicativos sobrecarregados de menus complexos e anúncios intrusivos, o projeto foi concebido para oferecer uma experiência de leitura contínua, elegante, rápida e &lt;strong&gt;100% offline&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Publicado sob a assinatura &lt;strong&gt;ADVG Software&lt;/strong&gt;, o aplicativo une o que há de mais moderno no desenvolvimento Android nativo: &lt;strong&gt;100% Jetpack Compose&lt;/strong&gt;, arquitetura reativa &lt;strong&gt;MVI (Model-View-Intent)&lt;/strong&gt; com fluxo unidirecional de dados (UDF), banco de dados local &lt;strong&gt;Room&lt;/strong&gt; pré-populado, sincronização de voz com a engine nativa de &lt;strong&gt;Text-to-Speech (TTS)&lt;/strong&gt; e respeitoso compromisso com a privacidade do usuário (&lt;em&gt;Privacy by Design&lt;/em&gt;).&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-arquitetura--decisões-de-engenharia"&gt;🏛️ Arquitetura &amp;amp; Decisões de Engenharia&lt;span class="hx:absolute hx:-mt-20" id="-arquitetura--decisões-de-engenharia"&gt;&lt;/span&gt;
+&lt;a href="#-arquitetura--decis%c3%b5es-de-engenharia" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;p&gt;O projeto foi estruturado seguindo rigorosos padrões de engenharia de software para garantir facilidade de manutenção, testes e altíssima performance em dispositivos de qualquer categoria:&lt;/p&gt;
+&lt;h3 data-hextra-search-id="1-padrão-mvi-puro-model-view-intent--udf"&gt;1. Padrão MVI Puro (Model-View-Intent) &amp;amp; UDF&lt;span class="hx:absolute hx:-mt-20" id="1-padrão-mvi-puro-model-view-intent--udf"&gt;&lt;/span&gt;
+&lt;a href="#1-padr%c3%a3o-mvi-puro-model-view-intent--udf" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;A interface reage exclusivamente a um fluxo unidirecional de dados imutável:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;UiState&lt;/code&gt; (&lt;code&gt;BibleState&lt;/code&gt;):&lt;/strong&gt; Modelo de estado único e imutável que centraliza a listagem de livros (Antigo e Novo Testamento), capítulos, versículos carregados, estado do player de áudio TTS, tamanho de fonte, tema ativo, favoritos e status de busca.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;UiIntent&lt;/code&gt; (&lt;code&gt;BibleIntent&lt;/code&gt;):&lt;/strong&gt; Intenções de ação emitidas pela UI de forma tipada (&lt;code&gt;LoadBooks&lt;/code&gt;, &lt;code&gt;LoadChapter&lt;/code&gt;, &lt;code&gt;PlayVerse&lt;/code&gt;, &lt;code&gt;ToggleBookmark&lt;/code&gt;, &lt;code&gt;SearchQuery&lt;/code&gt;, &lt;code&gt;UpdateSettings&lt;/code&gt;), processadas pelo &lt;code&gt;BibleViewModel&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;&lt;code&gt;UiEffect&lt;/code&gt; (&lt;code&gt;BibleEffect&lt;/code&gt;):&lt;/strong&gt; Canal de efeitos colaterais únicos (&lt;code&gt;Channel.BUFFERED&lt;/code&gt;) consumidos como &lt;code&gt;Flow&lt;/code&gt; para exibir toasts, feedbacks hápticos e eventos de navegação.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="2-injeção-de-dependências-manual--determinística"&gt;2. Injeção de Dependências Manual &amp;amp; Determinística&lt;span class="hx:absolute hx:-mt-20" id="2-injeção-de-dependências-manual--determinística"&gt;&lt;/span&gt;
+&lt;a href="#2-inje%c3%a7%c3%a3o-de-depend%c3%aancias-manual--determin%c3%adstica" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;p&gt;Ao invés de introduzir a sobrecarga de tempo de compilação e complexidade de anotações de bibliotecas como Hilt ou Dagger, o projeto utiliza &lt;strong&gt;Injeção Manual / Service Locator&lt;/strong&gt; através de &lt;code&gt;BibleApp&lt;/code&gt; e &lt;code&gt;BibleViewModelFactory&lt;/code&gt;. Essa decisão arquitetural resulta em:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Tempos de compilação expressivamente menores no Gradle.&lt;/li&gt;
+&lt;li&gt;Dependências determinísticas e explícitas.&lt;/li&gt;
+&lt;li&gt;Inicialização ultra-rápida no cold start da aplicação.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="3-persistência-local-reativa--offline-first-room--sqlite"&gt;3. Persistência Local Reativa &amp;amp; Offline-First (Room + SQLite)&lt;span class="hx:absolute hx:-mt-20" id="3-persistência-local-reativa--offline-first-room--sqlite"&gt;&lt;/span&gt;
+&lt;a href="#3-persist%c3%aancia-local-reativa--offline-first-room--sqlite" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Banco Pré-populado:&lt;/strong&gt; Utilização do &lt;code&gt;Room.databaseBuilder(...).createFromAsset(&amp;quot;database/bible.sqlite&amp;quot;)&lt;/code&gt;, garantindo acesso imediato a todos os 66 livros e mais de 31.000 versículos sem necessidade de download pós-instalação.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Consultas Reativas com Flow:&lt;/strong&gt; O &lt;code&gt;BibleDao&lt;/code&gt; expõe fluxos reativos (&lt;code&gt;Flow&amp;lt;List&amp;lt;VerseEntity&amp;gt;&amp;gt;&lt;/code&gt;) consumidos pelo repositório e pelo ViewModel, atualizando a UI instantaneamente conforme filtros ou bookmarks são acionados.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Migrações Controladas:&lt;/strong&gt; Histórico de migrações (&lt;code&gt;MIGRATION_1_2&lt;/code&gt;) para adição de tabelas relacionais de marcações sem perda de dados do usuário.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DataStore Preferences:&lt;/strong&gt; Configurações de preferências visuais (tamanho da fonte, família tipográfica Serif/Sans, tema de fundo Claro/Escuro/Sépia) e parâmetros de áudio salvos via &lt;code&gt;SettingsManager&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="4-player-global--engine-text-to-speech-tts-com-auto-scroll"&gt;4. Player Global &amp;amp; Engine Text-to-Speech (TTS) com Auto-Scroll&lt;span class="hx:absolute hx:-mt-20" id="4-player-global--engine-text-to-speech-tts-com-auto-scroll"&gt;&lt;/span&gt;
+&lt;a href="#4-player-global--engine-text-to-speech-tts-com-auto-scroll" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Engine &lt;code&gt;TTSManager&lt;/code&gt;:&lt;/strong&gt; Encapsula o &lt;code&gt;android.speech.tts.TextToSpeech&lt;/code&gt; nativo com suporte a vozes em português (pt-BR), controle dinâmico de tom (&lt;em&gt;pitch&lt;/em&gt;) e velocidade (&lt;em&gt;speech rate&lt;/em&gt;).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sincronização em Tempo Real:&lt;/strong&gt; Escuta eventos via &lt;code&gt;UtteranceProgressListener&lt;/code&gt; e &lt;code&gt;onRangeStart&lt;/code&gt;, mapeando a posição exata da fala com o versículo em exibição na tela.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto-Scroll Suave:&lt;/strong&gt; A tela realiza a rolagem automática sincronizada enquanto a leitura em áudio progride.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Player Desacoplado no Scaffold:&lt;/strong&gt; O player de áudio reside no nível superior do layout da &lt;code&gt;MainActivity&lt;/code&gt;, permitindo que o usuário escute a Bíblia enquanto navega entre diferentes livros, capítulos ou busca.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;UI Customizada:&lt;/strong&gt; Barra de progresso ondulada (&lt;code&gt;SquigglySlider&lt;/code&gt;) personalizada para o player de áudio.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="5-agendamento-em-segundo-plano--notificações-workmanager"&gt;5. Agendamento em Segundo Plano &amp;amp; Notificações (WorkManager)&lt;span class="hx:absolute hx:-mt-20" id="5-agendamento-em-segundo-plano--notificações-workmanager"&gt;&lt;/span&gt;
+&lt;a href="#5-agendamento-em-segundo-plano--notifica%c3%a7%c3%b5es-workmanager" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Devocional Diário:&lt;/strong&gt; Utilização de &lt;code&gt;PeriodicWorkRequestBuilder&lt;/code&gt; do &lt;strong&gt;WorkManager&lt;/strong&gt; (&lt;code&gt;ReminderWorker&lt;/code&gt;) para disparar notificações diárias no horário escolhido pelo usuário.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Resiliência pós-reinicialização:&lt;/strong&gt; &lt;code&gt;BootReceiver&lt;/code&gt; escuta a reinicialização do dispositivo para reagendar alarmes de forma transparente.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 data-hextra-search-id="6-qualidade-otimização--google-play-apis"&gt;6. Qualidade, Otimização &amp;amp; Google Play APIs&lt;span class="hx:absolute hx:-mt-20" id="6-qualidade-otimização--google-play-apis"&gt;&lt;/span&gt;
+&lt;a href="#6-qualidade-otimiza%c3%a7%c3%a3o--google-play-apis" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;R8 &amp;amp; Minificação:&lt;/strong&gt; Compilado com &lt;code&gt;isMinifyEnabled = true&lt;/code&gt;, &lt;code&gt;isShrinkResources = true&lt;/code&gt; e Proguard configurado para geração de APKs e App Bundles enxutos.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;In-App Review API:&lt;/strong&gt; Integração com &lt;code&gt;com.google.android.play:review-ktx&lt;/code&gt; via &lt;code&gt;InAppReviewManager&lt;/code&gt; para solicitar feedback do usuário em momentos contextuais favoráveis.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Anúncios Nativos Integrados:&lt;/strong&gt; Integração de anúncios nativos elegantes com a paleta do app (&lt;code&gt;AdBanner&lt;/code&gt;), sem pop-ups invasivos.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-estrutura-de-código"&gt;🗂️ Estrutura de Código&lt;span class="hx:absolute hx:-mt-20" id="-estrutura-de-código"&gt;&lt;/span&gt;
+&lt;a href="#-estrutura-de-c%c3%b3digo" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;div class="hextra-code-block hx:relative hx:mt-6 hx:first:mt-0 hx:group/code"&gt;
+&lt;div&gt;&lt;pre&gt;&lt;code&gt;com.advg.minhabibilia/
+├── BibleApp.kt # Application Class &amp;amp; Singletons
+├── MainActivity.kt # Host Activity &amp;amp; Scaffold Global
+├── mvi/
+│ └── MviBase.kt # Contratos genéricos: UiState, UiIntent, UiEffect, BaseViewModel
+├── data/
+│ ├── BootReceiver.kt # Reagendamento automático de alarmes pós-boot
+│ ├── NotificationHelper.kt # Canais e builders de notificações
+│ ├── ReminderWorker.kt # WorkManager CoroutineWorker para lembretes diários
+│ ├── SettingsManager.kt # Jetpack DataStore Preferences
+│ ├── TTSManager.kt # Engine Text-to-Speech com rastreio de progresso
+│ ├── dao/
+│ │ └── BibleDao.kt # Room DAO (Consultas reativas Flow e buscas textuais)
+│ ├── database/
+│ │ └── BibleDatabase.kt # Room Database com migrações e createFromAsset
+│ ├── entity/ # Entidades relacionais (Book, Verse, Bookmark, Testament)
+│ └── repository/ # Camada de Repositório (BibleRepository e BibleRepositoryImpl)
+├── ui/
+│ ├── bible/
+│ │ ├── BibleContract.kt # Definição de BibleState, BibleIntent e BibleEffect
+│ │ ├── BibleViewModel.kt # Processamento MVI central de dados e eventos
+│ │ ├── BibleViewModelFactory.kt
+│ │ ├── BooksScreen.kt # Catálogo de livros, divisão testamentária e drawer
+│ │ ├── ChaptersScreen.kt # Seletor de capítulos em grade responsiva
+│ │ ├── ReadingScreen.kt # Leitura imersiva, gestos horizontais e áudio sincronizado
+│ │ ├── SearchScreen.kt # Mecanismo de busca textual em tempo real
+│ │ ├── BookmarksScreen.kt # Gestão de versículos favoritados
+│ │ └── components/ # Componentes reutilizáveis (VerseItem, AudioPlayer, SquigglySlider)
+│ ├── navigation/
+│ │ └── BibleNavigation.kt # NavHost Compose com animações personalizadas de transição
+│ └── theme/ # Paleta de cores, tipografia Serif/Sans e tema dinâmico
+└── util/
+└── InAppReviewManager.kt # Gerenciador da API de avaliações do Google Play&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class="hextra-code-copy-btn-container hx:opacity-0 hx:transition hx:group-hover/code:opacity-100 hx:flex hx:gap-1 hx:absolute hx:m-[11px] hx:right-0 hx:top-0"&gt;
+&lt;button
+class="hextra-code-copy-btn hx:group/copybtn hx:cursor-pointer hx:transition-all hx:active:opacity-50 hx:bg-primary-700/5 hx:border hx:border-black/5 hx:text-gray-600 hx:hover:text-gray-900 hx:rounded-md hx:p-1.5 hx:dark:bg-primary-300/10 hx:dark:border-white/10 hx:dark:text-gray-400 hx:dark:hover:text-gray-50"
+title="Copy code"
+aria-label="Copy code"
+data-copied-label="Copied!"
+&gt;
+&lt;div class="hextra-copy-icon hx:group-[.copied]/copybtn:hidden hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;div class="hextra-success-icon hx:hidden hx:group-[.copied]/copybtn:block hx:pointer-events-none hx:h-4 hx:w-4"&gt;&lt;/div&gt;
+&lt;/button&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-stack-técnica-completa"&gt;🛠️ Stack Técnica Completa&lt;span class="hx:absolute hx:-mt-20" id="-stack-técnica-completa"&gt;&lt;/span&gt;
+&lt;a href="#-stack-t%c3%a9cnica-completa" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th style="text-align: left"&gt;Camada&lt;/th&gt;
+&lt;th style="text-align: left"&gt;Tecnologia / Biblioteca&lt;/th&gt;
+&lt;th style="text-align: left"&gt;Versão / Detalhes&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Linguagem &amp;amp; Compilador&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Kotlin + Kotlin Compose Compiler Plugin&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;Kotlin 2.2.10&lt;/code&gt; / Java 11&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Build Tooling &amp;amp; KSP&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;AGP 9.1.1 + KSP&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;KSP 2.3.5&lt;/code&gt; para Room e geração de código&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Android SDK Target&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Target / Compile SDK&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;API 36&lt;/code&gt; (Android 16) / Min SDK &lt;code&gt;24&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;UI Toolkit&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Jetpack Compose (Compose BOM)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;BOM 2024.09.00&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Design System&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Material Design 3 (Material3)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Temas Claro, Escuro e Sépia com Dynamic Color&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Navegação&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Navigation Compose&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;v2.8.9&lt;/code&gt; com animações horizontais e fade&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Padrão de Arquitetura&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;MVI (Model-View-Intent)&lt;/td&gt;
+&lt;td style="text-align: left"&gt;UDF com &lt;code&gt;StateFlow&lt;/code&gt;, &lt;code&gt;SharedFlow&lt;/code&gt; e &lt;code&gt;Channel&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Banco de Dados Local&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Room Database&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;v2.7.0&lt;/code&gt; pré-populado com SQLite&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Preferências&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Jetpack DataStore Preferences&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;v1.1.7&lt;/code&gt; (&lt;code&gt;SettingsManager&lt;/code&gt;)&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Background Processing&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Jetpack WorkManager&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;v2.10.0&lt;/code&gt; com &lt;code&gt;PeriodicWorkRequest&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Áudio &amp;amp; Voz&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Android Text-to-Speech (TTS) API&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Sincronização de utterance e auto-scroll&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Imagens&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;Coil Compose&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;v2.7.0&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Otimização &amp;amp; Release&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;R8 + Proguard&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;isMinifyEnabled = true&lt;/code&gt;, &lt;code&gt;isShrinkResources = true&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style="text-align: left"&gt;&lt;strong&gt;Google Play Services&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align: left"&gt;In-App Review + Google Mobile Ads&lt;/td&gt;
+&lt;td style="text-align: left"&gt;&lt;code&gt;review-ktx:2.0.2&lt;/code&gt; &amp;amp; &lt;code&gt;play-services-ads:23.6.0&lt;/code&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;hr&gt;
+&lt;h2 data-hextra-search-id="-download--disponibilidade"&gt;📲 Download &amp;amp; Disponibilidade&lt;span class="hx:absolute hx:-mt-20" id="-download--disponibilidade"&gt;&lt;/span&gt;
+&lt;a href="#-download--disponibilidade" class="subheading-anchor" aria-label="Permalink for this section"&gt;&lt;/a&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Google Play Store:&lt;/strong&gt; &lt;a
+href="https://play.google.com/store/apps/details?id=com.advg.minhabibilia"target="_blank" rel="noopener"&gt;Minha Bíblia no Google Play&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Pacote:&lt;/strong&gt; &lt;code&gt;com.advg.minhabibilia&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Desenvolvedor:&lt;/strong&gt; ADVG Software&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Repositório:&lt;/strong&gt; &lt;a
+href="https://github.com/alandvgarcia/MinhaBibilia"target="_blank" rel="noopener"&gt;alandvgarcia/MinhaBibilia&lt;/a&gt; &lt;em&gt;(privado)&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item></channel></rss>
