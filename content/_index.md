@@ -12,8 +12,7 @@ title: "Alan Garcia | Mobile & Multiplatform Engineer"
     <span style="background: #38bdf8; color: #0f172a; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Compose Multiplatform</span>
     <span style="background: #22c55e; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Android Nativo</span>
     <span style="background: #f97316; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Swift & iOS</span>
-    <span style="background: #6366f1; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">BLE & IoT</span>
-    <span style="background: #14b8a6; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Offline-First</span>
+    <span style="background: #14b8a6; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Offline-First & Conectividade</span>
     <span style="background: #a855f7; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">CI/CD & Code Review</span>
   </div>
 </div>
@@ -22,22 +21,20 @@ title: "Alan Garcia | Mobile & Multiplatform Engineer"
 
 ## 🛠️ No que mexo no dia a dia
 
-Com mais de uma década de experiência no desenvolvimento de software e foco contínuo em soluções móveis, minha atuação é dividida em quatro grandes áreas:
+Com mais de uma década de experiência no desenvolvimento de software e foco contínuo em soluções móveis, minha atuação é estruturada em quatro pilares principais:
 
 {{< cards >}}
-  {{< card link="/portfolio/solinftec-mobile" title="🚀 Multiplataforma (KMP & CMP)" subtitle="Arquitetura de módulos compartilhados (Commons), unificação de lógica de negócio e interfaces declarativas entre Android e iOS." tag="Kotlin Multiplatform" >}}
-  {{< card link="/portfolio/solinftec-mobile" title="⚡ Hardware, BLE & Offline-First" subtitle="Comunicação resiliente com computadores de bordo e sensores via Bluetooth Low Energy, telemetria em tempo real e sincronização de dados." tag="IoT & Resiliência" >}}
-  {{< card link="/portfolio/maplibre-android" title="🗺️ Android & Computação Geoespacial" subtitle="Jetpack Compose, Coroutines Flow, Room/SQLDelight, renderização de mapas vetoriais de alto desempenho com MapLibre GL e Turf." tag="Android & GIS" >}}
-  {{< card link="/portfolio/" title="🛡️ Engenharia & Cultura de Código" subtitle="Clean Architecture, automação de pipelines CI/CD com GitHub Actions, e processos estruturados de revisão de código em múltiplos eixos." tag="Qualidade & Liderança" >}}
+  {{< card link="/portfolio/" title="🚀 Multiplataforma (KMP & CMP)" subtitle="Arquitetura de módulos compartilhados (Commons), unificação de lógica de negócio e interfaces declarativas entre Android e iOS." tag="Kotlin Multiplatform" >}}
+  {{< card link="/portfolio/" title="⚡ Conectividade & Offline-First" subtitle="Sistemas com persistência atômica local, estratégias de sincronização em segundo plano e comunicação com hardware local." tag="Resiliência & Conectividade" >}}
+  {{< card link="/portfolio/" title="📱 Android Nativo & Arquitetura" subtitle="Jetpack Compose, Kotlin Coroutines Flow, Room/SQLDelight, ciclo de vida e Clean Architecture / MVI." tag="Android Nativo" >}}
+  {{< card link="/portfolio/" title="🛡️ Engenharia & Cultura de Código" subtitle="Processos estruturados de revisão de código, automação de pipelines CI/CD com GitHub Actions e padrões de design limpo." tag="Qualidade & Liderança" >}}
 {{< /cards >}}
 
 ---
 
-## 💼 Destaques do Portfólio
+## 🧭 Explore o Espaço
 
 {{< cards >}}
-  {{< card link="/portfolio/tmdb-app-kmp" title="TMDBApp (KMM / KMP)" subtitle="App mobile multiplataforma compartilhando modelos, networking e lógica com Ktor e Coroutines." tag="KMP" >}}
-  {{< card link="/portfolio/compose-multiplatform" title="Compose Multiplatform Study" subtitle="Interface 100% declarativa e unificada entre Android e iOS com Compose Multiplatform (CMP)." tag="CMP" >}}
-  {{< card link="/portfolio/mobile-movies-app" title="Mobile Movies App" subtitle="App nativo Android com MVVM, Jetpack Paging Library e Coroutines consumindo a TMDB API." tag="Android" >}}
-  {{< card link="/portfolio/" title="Ver Todos os Projetos →" subtitle="Explore a lista completa de projetos, repositórios open-source e estudos de caso." tag="Portfólio" >}}
+  {{< card link="/portfolio/" title="💼 Stack & Atuação Profissional" subtitle="Conheça em detalhes as tecnologias, bibliotecas e padrões de engenharia com os quais atuo no dia a dia." >}}
+  {{< card link="/blog/" title="✍️ Blog de Engenharia" subtitle="Artigos técnicos, decisões de arquitetura e aprendizados práticos sobre o ecossistema móvel." >}}
 {{< /cards >}}

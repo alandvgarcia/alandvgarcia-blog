@@ -1,40 +1,57 @@
 ---
-title: "Portfólio de Projetos"
-description: "Projetos em destaque, estudos de caso e contribuições de engenharia desenvolvidas por Alan Garcia, focados em Kotlin Multiplatform, Compose, Android, iOS e arquitetura de software."
+title: "Stack & Atuação Profissional"
+description: "Visão geral das tecnologias, arquiteturas e práticas de engenharia de software com as quais atuo no dia a dia."
 ---
 
-Aqui você encontra uma seleção dos meus principais projetos de produção, estudos de caso e contribuições open-source, refletindo as tecnologias e arquiteturas que utilizo no dia a dia.
-
----
-
-## 🚀 Kotlin Multiplatform & Compose (KMP / CMP)
-
-Soluções e estudos demonstrando compartilhamento de lógica de negócio, persistência, networking e interfaces declarativas entre Android e iOS.
-
-{{< cards >}}
-  {{< card link="solinftec-mobile" title="Solinftec Mobile Platform" subtitle="Estudo de caso de arquitetura corporativa de alta criticidade com KMP, Compose, BLE e resiliência offline-first." tag="Case Study • KMP" >}}
-  {{< card link="tmdb-app-kmp" title="TMDBApp (KMM / KMP)" subtitle="Aplicação móvel compartilhando regras de negócio, dados e consumo da TMDB API entre Android e iOS." tag="KMP • Coroutines" >}}
-  {{< card link="compose-multiplatform" title="Compose Multiplatform Study" subtitle="Interface 100% declarativa e unificada entre Android e iOS utilizando Compose Multiplatform (CMP) e MaterialTheme." tag="Compose • Multiplatform" >}}
-{{< /cards >}}
+Aqui apresento os principais pilares técnicos, linguagens e padrões arquiteturais que fazem parte da minha rotina diária como engenheiro de software especialista em ecossistemas móveis e multiplataforma.
 
 ---
 
-## 📱 Android Nativo, Jetpack & Geoespacial
+## 🚀 Desenvolvimento Multiplataforma (KMP & CMP)
 
-Projetos com foco em engenharia nativa, padrões reativos, ciclo de vida e computação espacial.
+Foco contínuo na unificação de lógica de negócio e aceleração de entrega entre Android e iOS através de código compartilhado:
 
-{{< cards >}}
-  {{< card link="mobile-movies-app" title="Mobile Movies App" subtitle="App Android nativo com MVVM, Jetpack Paging Library, Coroutines e Lifecycle para paginação eficiente de filmes." tag="Android • MVVM" >}}
-  {{< card link="maplibre-android" title="MapLibre GL Integration" subtitle="Renderização de mapas vetoriais de alto desempenho, markers customizados e análise geoespacial com Turf no Android." tag="Android • MapLibre" >}}
-  {{< card link="https://github.com/alandvgarcia/AndroidPagingJetpackStudy" title="Jetpack Paging 3 Study" subtitle="Arquitetura reativa para listagens infinitas e fluxo de dados paginados utilizando Paging 3 e Kotlin Flow." tag="Android • Flow" >}}
-  {{< card link="https://github.com/alandvgarcia/adopt_a_pet_app" title="Adopt a Pet App" subtitle="Interface moderna em Android para adoção de pets com boas práticas de design e separação de camadas." tag="Android • UI" >}}
-{{< /cards >}}
+- **Módulos Compartilhados (*Commons*)**: Criação e manutenção de bibliotecas internas em **Kotlin Multiplatform (KMP)** contendo regras de negócio, contratos de dados, persistência e comunicação de rede.
+- **Compose Multiplatform (CMP)**: Construção de componentes de interface declarativa e fluxos visuais compartilhados, mantendo consistência e reduzindo retrabalho entre plataformas.
+- **Interoperabilidade**: Integração fluida entre o código compartilhado em Kotlin e o ambiente nativo de cada plataforma (Android/Kotlin e iOS/Swift).
 
 ---
 
-## 💡 Algoritmos, Ferramentas & Web
+## 📱 Android Nativo & Arquitetura Reativa
 
-{{< cards >}}
-  {{< card link="https://github.com/alandvgarcia/aoc-2021-in-kotlin" title="Advent of Code em Kotlin" subtitle="Resolução de problemas de algoritmos e estruturas de dados explorando recursos funcionais e idiomáticos de Kotlin." tag="Kotlin • Algoritmos" >}}
-  {{< card link="https://github.com/alandvgarcia/alandvgarcia-blog" title="Personal Blog & Portfolio" subtitle="Website pessoal moderno com Hugo e tema Hextra, com busca integrada, dark mode e arquitetura JAMStack." tag="Hugo • Hextra" >}}
-{{< /cards >}}
+Experiência consolidada no desenvolvimento nativo para a plataforma Android com foco em performance e manutenibilidade:
+
+- **UI Declarativa**: Criação de interfaces modernas, reutilizáveis e acessíveis com **Jetpack Compose**.
+- **Assincronia e Fluxo de Dados**: Programação reativa com **Kotlin Coroutines** e **StateFlow / SharedFlow** para gerenciamento de estado previsível.
+- **Padrões de Arquitetura**: Aplicação de **Clean Architecture**, **MVI (Model-View-Intent)** e **MVVM**, garantindo isolamento entre camadas de apresentação, domínio e dados.
+- **Componentes do Jetpack**: Utilização de Lifecycle, Navigation, Paging 3, WorkManager e Room/SQLDelight para persistência local estruturada.
+
+---
+
+## ⚡ Conectividade & Sistemas Offline-First
+
+Desenvolvimento de aplicações projetadas para operar de forma contínua em cenários de alta criticidade e conectividade variável:
+
+- **Arquitetura Offline-First**: Persistência local atômica e confiável como fonte primária da verdade, permitindo uso integral da aplicação sem dependência de conexão imediata.
+- **Sincronização em Segundo Plano**: Estratégias inteligentes de sincronização, resolução de conflitos e envio resiliente de dados acumulados assim que a rede estiver disponível.
+- **Integração com Hardware Local**: Comunicação e troca de dados com periféricos, sensores e dispositivos de campo via conectividade local (Bluetooth e protocolos de comunicação direta), com tratamento de reconexão e filas de mensagens.
+
+---
+
+## 🍎 iOS & Integração com Swift
+
+Atuação no ecossistema Apple com foco em interoperabilidade e suporte completo a produtos multiplataforma:
+
+- **Linguagens e Frameworks**: Desenvolvimento utilizando **Swift**, **SwiftUI** e UIKit quando necessário.
+- **Consumo de KMP**: Integração dos frameworks gerados pelo Kotlin Multiplatform no ciclo de vida das aplicações iOS.
+- **Gerenciamento de Dependências**: Configuração e publicação via Swift Package Manager (SPM) e CocoaPods.
+
+---
+
+## 🛡️ Cultura de Engenharia, Qualidade & CI/CD
+
+Compromisso com o rigor técnico, boas práticas de código e automação de processos:
+
+- **Revisão de Código Estruturada**: Análise focada em dois eixos complementares — conformidade estrita com a especificação funcional e aderência aos padrões de código, identificação de code smells e design limpo.
+- **Testes & Confiabilidade**: Desenvolvimento orientado a testes (TDD), testes unitários e de integração em camadas compartilhadas e nativas.
+- **Pipelines de CI/CD**: Automação de compilação, análise estática (detekt, ktlint, SwiftLint) e publicação contínua com **GitHub Actions**.
