@@ -19,9 +19,20 @@ title: "Alan Garcia | Mobile & Multiplatform Engineer"
 
 ---
 
+## 📱 Apps Publicados em Produção
+
+Aplicativos Android nativos desenvolvidos com **Jetpack Compose** e publicados na **Google Play Store**:
+
+{{< cards >}}
+  {{< card link="/portfolio/minha-biblia/" title="📖 Minha Bíblia — Devocional & Áudio TTS" subtitle="App Android 100% Jetpack Compose, arquitetura MVI pura, banco SQLite com Room, sincronização de áudio TTS em tempo real e 100% offline." tag="Google Play • Jetpack Compose" >}}
+  {{< card link="/portfolio/marca-tento/" title="🃏 Marca Tento — Contador de Truco" subtitle="Contador ágil de tento e placar em Jetpack Compose e Material 3, com feedback tátil e operação 100% offline." tag="Google Play • Android Nativo" >}}
+{{< /cards >}}
+
+---
+
 ## 🛠️ No que mexo no dia a dia
 
-Com mais de uma década de experiência no desenvolvimento de software e foco contínuo em soluções móveis, minha atuação é estruturada em quatro pilares principais:
+Com mais de uma década de experiência no desenvolvimento de software e foco contínuo em soluções móveis, minha atuação corporativa é estruturada em quatro pilares principais:
 
 {{< cards >}}
   {{< card link="/portfolio/" title="🚀 Multiplataforma (KMP & CMP)" subtitle="Arquitetura de módulos compartilhados (Commons), unificação de lógica de negócio e interfaces declarativas entre Android e iOS." tag="Kotlin Multiplatform" >}}
@@ -35,6 +46,6 @@ Com mais de uma década de experiência no desenvolvimento de software e foco co
 ## 🧭 Explore o Espaço
 
 {{< cards >}}
-  {{< card link="/portfolio/" title="💼 Stack & Atuação Profissional" subtitle="Conheça em detalhes as tecnologias, bibliotecas e padrões de engenharia com os quais atuo no dia a dia." >}}
+  {{< card link="/portfolio/" title="💼 Portfólio & Atuação Profissional" subtitle="Conheça os projetos, estudos de caso detalhados, tecnologias e padrões de engenharia." >}}
   {{< card link="/blog/" title="✍️ Blog de Engenharia" subtitle="Artigos técnicos, decisões de arquitetura e aprendizados práticos sobre o ecossistema móvel." >}}
 {{< /cards >}}

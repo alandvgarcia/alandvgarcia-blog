@@ -1,9 +1,23 @@
 ---
-title: "Stack & Atuação Profissional"
-description: "Visão geral das tecnologias, arquiteturas e práticas de engenharia de software com as quais atuo no dia a dia."
+title: "Portfólio & Atuação Profissional"
+description: "Aplicativos em produção na Google Play Store, tecnologias, arquiteturas e práticas de engenharia de software com as quais atuo no dia a dia."
 ---
 
-Aqui apresento os principais pilares técnicos, linguagens e padrões arquiteturais que fazem parte da minha rotina diária como engenheiro de software especialista em ecossistemas móveis e multiplataforma.
+Aqui apresento meus aplicativos publicados na **Google Play Store**, bem como os principais pilares técnicos, linguagens e padrões arquiteturais que fazem parte da minha rotina diária como engenheiro de software especialista em ecossistemas móveis e multiplataforma.
+
+---
+
+## 📱 Aplicativos em Produção (Google Play Store)
+
+Aplicativos Android nativos desenvolvidos com foco em performance, experiência do usuário e arquitetura limpa, disponíveis publicamente para download:
+
+{{< cards >}}
+  {{< card link="/portfolio/minha-biblia/" title="📖 Minha Bíblia — Devocional & Áudio TTS" subtitle="App Android 100% Jetpack Compose, arquitetura MVI pura, banco SQLite pré-populado com Room, sincronização de áudio Text-to-Speech (TTS) em tempo real e 100% offline." tag="Jetpack Compose • MVI • Room" >}}
+  {{< card link="/portfolio/marca-tento/" title="🃏 Marca Tento — Contador & Placar de Truco" subtitle="App Android nativo em Jetpack Compose e Material 3 para controle ágil do placar de Truco, com feedback tátil, customização de regras e operação 100% offline." tag="Android Nativo • Compose • Offline" >}}
+{{< /cards >}}
+
+> [!TIP]
+> Clique nos cards acima para conferir o **estudo de caso completo**, detalhes de arquitetura, dependências do Gradle e links diretos para download na **Google Play Store**.
 
 ---
 
@@ -54,4 +68,4 @@ Compromisso com o rigor técnico, boas práticas de código e automação de pro
 
 - **Revisão de Código Estruturada**: Análise focada em dois eixos complementares — conformidade estrita com a especificação funcional e aderência aos padrões de código, identificação de code smells e design limpo.
 - **Testes & Confiabilidade**: Desenvolvimento orientado a testes (TDD), testes unitários e de integração em camadas compartilhadas e nativas.
-- **Pipelines de CI/CD**: Automação de compilação, análise estática (detekt, ktlint, SwiftLint) e publicação contínua com **GitHub Actions**.
+- **Pipelines de CI/CD**: Automação de compilação, análise estática (detekt, ktlint, SwiftLint) e publicação contínua com **GitHub Actions** para lojas de aplicativos.

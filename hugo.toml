@@ -20,7 +20,7 @@ enableEmoji = true
     url = "/"
     weight = 1
   [[menu.main]]
-    name = "Stack & Atuação"
+    name = "Portfólio & Atuação"
     url = "/portfolio/"
     weight = 2
   [[menu.main]]
