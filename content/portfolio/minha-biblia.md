@@ -5,7 +5,6 @@ draft: false
 description: "Aplicativo Android moderno 100% em Jetpack Compose, arquitetura MVI, banco SQLite pré-populado com Room, Text-to-Speech com sincronização em tempo real e operação offline."
 techStack: ["Jetpack Compose", "Kotlin", "Material 3", "MVI Architecture", "Room Database", "Coroutines & Flow", "Text-to-Speech (TTS)", "DataStore", "WorkManager", "Offline-First"]
 playStoreUrl: "https://play.google.com/store/apps/details?id=com.advg.minhabibilia"
-githubUrl: "https://github.com/alandvgarcia/MinhaBibilia"
 package: "com.advg.minhabibilia"
 featured: true
 ---
@@ -13,9 +12,6 @@ featured: true
 <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
   <a href="https://play.google.com/store/apps/details?id=com.advg.minhabibilia" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #01875f; color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9rem;">
     <span>▶ Ver na Google Play Store</span>
-  </a>
-  <a href="https://github.com/alandvgarcia/MinhaBibilia" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.5rem; background: #24292f; color: white; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 600; text-decoration: none; font-size: 0.9rem; border: 1px solid #444;">
-    <span>🔒 Repositório Privado no GitHub</span>
   </a>
 </div>
 
@@ -133,4 +129,3 @@ com.advg.minhabibilia/
 - **Google Play Store:** [Minha Bíblia no Google Play](https://play.google.com/store/apps/details?id=com.advg.minhabibilia)
 - **Pacote:** `com.advg.minhabibilia`
 - **Desenvolvedor:** ADVG Software
-- **Repositório:** [alandvgarcia/MinhaBibilia](https://github.com/alandvgarcia/MinhaBibilia) *(privado)*

@@ -1,0 +1,35 @@
+/* Custom CSS for calm-planck */
+
+/* Reset Hextra's buggy absolute positioning of card tags */
+.hextra-card-tag {
+  position: static;
+}
+
+.hextra-card-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+.hextra-card-header.no-subtitle {
+  padding-bottom: 1rem;
+}
+
+.hextra-card-title {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-weight: 600;
+  flex: 1 1 160px;
+  min-width: 0;
+  word-break: break-word;
+}
+
+.hextra-card-badge {
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+  margin-left: auto;
+}

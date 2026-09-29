@@ -29,42 +29,52 @@
   {{- end -}}
 >
   {{- with $image -}}
-    <img
-      alt="{{ $alt }}"
-      class="hextra-card-image"
-      loading="lazy"
-      decoding="async"
-      src="{{ $image | safeURL }}"
-      {{ with $width }}width="{{ . }}"{{ end }}
-      {{ with $height }}height="{{ . }}"{{ end }}
-      {{ with $imageStyle }}style="{{ . | safeCSS }}"{{ end }}
-    />
+    <div class="hx:relative">
+      <img
+        alt="{{ $alt }}"
+        class="hextra-card-image"
+        loading="lazy"
+        decoding="async"
+        src="{{ $image | safeURL }}"
+        {{ with $width }}width="{{ . }}"{{ end }}
+        {{ with $height }}height="{{ . }}"{{ end }}
+        {{ with $imageStyle }}style="{{ . | safeCSS }}"{{ end }}
+      />
+      {{- if $tag }}
+        <div class="hextra-card-image-tag">
+          {{- partial "shortcodes/badge.html" (dict
+            "content" $tag
+            "color" $tagColor
+            "border" $tagBorder
+            "icon" $tagIcon
+            )
+          -}}
+        </div>
+      {{- end -}}
+    </div>
   {{- end -}}
 
-  {{- $padding := "hx:p-4" -}}
-  {{- with $subtitle -}}
-    {{- $padding = "hx:pt-4 hx:px-4" -}}
-  {{- end -}}
-
-  <div class="hx:mt-auto">
-    <span class="hextra-card-icon hx:flex hx:font-semibold hx:items-start hx:gap-2 {{ $padding }} hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">
-      {{- with $icon }}{{ partial "utils/icon.html" (dict "name" $icon) -}}{{- end -}}
-      {{- $title -}}
-    </span>
+  <div class="{{ if $image }}hx:mt-auto{{ else }}hx:flex-1 hx:flex hx:flex-col{{ end }}">
+    <div class="hextra-card-header{{ if not $subtitle }} no-subtitle{{ end }}">
+      <span class="hextra-card-icon hextra-card-title hx:text-gray-700 hx:hover:text-gray-900 hx:dark:text-neutral-200 hx:dark:hover:text-neutral-50">
+        {{- with $icon }}{{ partial "utils/icon.html" (dict "name" $icon) -}}{{- end -}}
+        <span>{{- $title -}}</span>
+      </span>
+      {{- if and $tag (not $image) }}
+        <div class="hextra-card-badge">
+          {{- partial "shortcodes/badge.html" (dict
+            "content" $tag
+            "color" $tagColor
+            "border" $tagBorder
+            "icon" $tagIcon
+            )
+          -}}
+        </div>
+      {{- end -}}
+    </div>
     {{- with $subtitle -}}
       <div class="hextra-card-subtitle hx:line-clamp-3 hx:text-sm hx:font-normal hx:text-gray-500 hx:dark:text-gray-400 hx:px-4 hx:mb-4 hx:mt-2">{{- $subtitle | markdownify -}}</div>
     {{- end -}}
   </div>
-
-  {{- if $tag }}
-    {{- partial "shortcodes/badge.html" (dict
-      "content" $tag
-      "color" $tagColor
-      "class" "hextra-card-tag"
-      "border" $tagBorder
-      "icon" $tagIcon
-      )
-    -}}
-  {{- end -}}
 </a>
 {{- /* Strip trailing newline. */ -}}
