@@ -41,9 +41,3 @@ Com mais de uma década de experiência no desenvolvimento de software e foco co
   {{< card link="/portfolio/mobile-movies-app" title="Mobile Movies App" subtitle="App nativo Android com MVVM, Jetpack Paging Library e Coroutines consumindo a TMDB API." tag="Android" >}}
   {{< card link="/portfolio/" title="Ver Todos os Projetos →" subtitle="Explore a lista completa de projetos, repositórios open-source e estudos de caso." tag="Portfólio" >}}
 {{< /cards >}}
-
----
-
-{{< callout type="info" >}}
-**Acompanhe o Roadmap Aberto**: Você pode acompanhar o que estou desenvolvendo, propor melhorias ou sugerir novos temas de artigos diretamente no [Quadro de Issues e Roadmap](/roadmap/).
-{{< /callout >}}

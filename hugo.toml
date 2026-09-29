@@ -28,13 +28,9 @@ enableEmoji = true
     url = "/blog/"
     weight = 3
   [[menu.main]]
-    name = "Roadmap & Issues"
-    url = "/roadmap/"
-    weight = 4
-  [[menu.main]]
     name = "GitHub"
     url = "https://github.com/alandvgarcia"
-    weight = 5
+    weight = 4
     [menu.main.params]
       icon = "github"
 

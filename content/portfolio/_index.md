@@ -36,5 +36,5 @@ Projetos com foco em engenharia nativa, padrões reativos, ciclo de vida e compu
 
 {{< cards >}}
   {{< card link="https://github.com/alandvgarcia/aoc-2021-in-kotlin" title="Advent of Code em Kotlin" subtitle="Resolução de problemas de algoritmos e estruturas de dados explorando recursos funcionais e idiomáticos de Kotlin." tag="Kotlin • Algoritmos" >}}
-  {{< card link="https://github.com/alandvgarcia/alandvgarcia-blog" title="Personal Blog & Issues Roadmap" subtitle="Blog pessoal com Hextra e quadro Kanban de planejamento dinâmico conectado diretamente à API do GitHub." tag="Hugo • GitHub API" >}}
+  {{< card link="https://github.com/alandvgarcia/alandvgarcia-blog" title="Personal Blog & Portfolio" subtitle="Website pessoal moderno com Hugo e tema Hextra, com busca integrada, dark mode e arquitetura JAMStack." tag="Hugo • Hextra" >}}
 {{< /cards >}}
