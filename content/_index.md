@@ -4,8 +4,8 @@ title: "Alan Garcia | Mobile & Multiplatform Engineer"
 
 <div style="text-align: center; margin: 2rem 0;">
   <h1 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 0.5rem;">Olá, eu sou o Alan Garcia 👋</h1>
-  <p class="text-gray-600 dark:text-gray-400" style="font-size: 1.25rem; max-width: 720px; margin: 0 auto 1.5rem auto;">
-    Engenheiro de Software Especialista em <strong>Mobile & Multiplatform</strong> na <strong>Solinftec</strong>. Apaixonado pelo ecossistema <strong>Kotlin, Compose Multiplatform (CMP), Android, iOS e arquitetura de sistemas de alta resiliência</strong>.
+  <p class="text-gray-600 dark:text-gray-400" style="font-size: 1.25rem; max-width: 780px; margin: 0 auto 1.5rem auto;">
+    Engenheiro de Software <strong>Especialista Mobile</strong> com mais de <strong>8 anos de atuação na Solinftec</strong>. Foco em arquitetura de ecossistemas corporativos móveis de missão crítica, liderando iniciativas com <strong>Kotlin Multiplatform (KMM/KMP), Compose Multiplatform (CMP), Android nativo, iOS e Offline-First</strong>.
   </p>
   <div style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-bottom: 2rem;">
     <span style="background: #0284c7; color: white; padding: 0.25rem 0.75rem; border-radius: 9999px; font-size: 0.875rem; font-weight: 600;">Kotlin Multiplatform</span>
@@ -32,9 +32,9 @@ Aplicativos móveis nativos e multiplataforma publicados na **Google Play Store*
 
 ---
 
-## 🛠️ No que mexo no dia a dia
+## 🛠️ No que mexo no dia a dia (Projetos Corporativos & Privados)
 
-Com mais de uma década de experiência no desenvolvimento de software e foco contínuo em soluções móveis, minha atuação corporativa é estruturada em quatro pilares principais:
+Como **Especialista Mobile** com mais de 8 anos na Solinftec, lidero o desenvolvimento, testes e sustentação de ecossistemas móveis de alta criticidade e escala industrial. Minha atuação diária em projetos privados corporativos é estruturada em quatro pilares centrais:
 
 {{< cards >}}
   {{< card link="/portfolio/" title="🚀 Multiplataforma (KMP & CMP)" subtitle="Arquitetura de módulos compartilhados (Commons), unificação de lógica de negócio e interfaces declarativas entre Android e iOS." tag="Kotlin Multiplatform" >}}
